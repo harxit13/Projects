@@ -61,4 +61,4 @@ npm start
 ## Contribution
 
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
-open your browser at(https://cute-entremet-9bc6a6.netlify.app/)(default by port)
+open your browser at(https://cute-entremet-9bc6a6.netlify.app/) (default by port)
