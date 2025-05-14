@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlumniConnect | Home</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header" id="dynamic-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="index.html">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>AlumniConnect</span>
+          </a>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="alumni.html">Alumni Directory</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="mentorship.html">Mentorship</a></li>
+            <li><a href="news.html">News</a></li>
+          </ul>
+        </nav>
+        <div class="nav-buttons">
+          <a href="login.html" class="btn btn-secondary">Log In</a>
+          <a href="register.html" class="btn btn-primary">Sign Up</a>
+        </div>
+        <button class="mobile-menu-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="logo">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>AlumniConnect</span>
+      </div>
+      <button class="mobile-menu-close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="alumni.html">Alumni Directory</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="mentorship.html">Mentorship</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-buttons">
+      <a href="login.html" class="btn btn-secondary">Log In</a>
+      <a href="register.html" class="btn btn-primary btn-block">Sign Up</a>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Reconnect, Inspire, and Give Back to Your Alma Mater</h1>
+        <p>Join our alumni network to stay connected, mentor students, and participate in exclusive events.</p>
+        <div class="hero-buttons">
+          <a href="register.html" class="btn btn-primary">Join Network</a>
+          <a href="login.html" class="btn btn-outline">Sign In</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <h2 class="section-title">Why Join Our Alumni Network?</h2>
+      <p class="section-subtitle">Our platform offers multiple ways to stay connected and give back to your alma mater.</p>
+      
+      <div class="features-grid">
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <h3>Network</h3>
+          <p>Connect with fellow alumni across different industries and locations.</p>
+        </div>
+        
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon">
+            <i class="fa-solid fa-book-open"></i>
+          </div>
+          <h3>Mentor</h3>
+          <p>Share your expertise and guide current students in their career journeys.</p>
+        </div>
+        
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-icon">
+            <i class="fa-solid fa-calendar-days"></i>
+          </div>
+          <h3>Events</h3>
+          <p>Stay informed about and participate in exclusive alumni events and reunions.</p>
+        </div>
+        
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="feature-icon">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <h3>Recognize</h3>
+          <p>Celebrate accomplishments and contributions of distinguished alumni.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alumni-highlights">
+    <div class="container">
+      <h2 class="section-title">Featured Alumni</h2>
+      <p class="section-subtitle">Meet some of our exceptional graduates who are making an impact in their fields.</p>
+      
+      <div class="alumni-grid" id="featured-alumni">
+        <!-- Alumni cards will be loaded here from JS -->
+      </div>
+      
+      <div class="center-button">
+        <a href="alumni.html" class="btn btn-secondary">View All Alumni</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="events">
+    <div class="container">
+      <h2 class="section-title">Upcoming Events</h2>
+      <p class="section-subtitle">Join us at these upcoming events to network, learn, and reconnect with your alma mater.</p>
+      
+      <div class="events-grid" id="upcoming-events">
+        <!-- Event cards will be loaded here from JS -->
+      </div>
+      
+      <div class="center-button">
+        <a href="events.html" class="btn btn-secondary">View All Events</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Reconnect?</h2>
+      <p>Join thousands of fellow alumni who are already part of our growing network.</p>
+      <a href="register.html" class="btn btn-primary">Join Us Today</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>AlumniConnect</span>
+          </div>
+          <p>Connecting graduates with their alma mater for mentorship, networking, and lifelong learning opportunities.</p>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="alumni.html">Alumni Directory</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="mentorship.html">Mentorship</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="#">Alumni Magazine</a></li>
+            <li><a href="#">Career Resources</a></li>
+            <li><a href="#">Scholarship Programs</a></li>
+            <li><a href="#">Donation Opportunities</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <ul class="contact-info">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>123 University Avenue, City, State ZIP</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span>(123) 456-7890</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:alumni@university.edu">alumni@university.edu</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> AlumniConnect. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

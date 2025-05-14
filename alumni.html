@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlumniConnect | Alumni Directory</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/alumni.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header header-solid">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="index.html">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>AlumniConnect</span>
+          </a>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="alumni.html" class="active">Alumni Directory</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="mentorship.html">Mentorship</a></li>
+            <li><a href="news.html">News</a></li>
+          </ul>
+        </nav>
+        <div class="nav-buttons">
+          <a href="login.html" class="btn btn-secondary">Log In</a>
+          <a href="register.html" class="btn btn-primary">Sign Up</a>
+        </div>
+        <button class="mobile-menu-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="logo">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>AlumniConnect</span>
+      </div>
+      <button class="mobile-menu-close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="alumni.html" class="active">Alumni Directory</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="mentorship.html">Mentorship</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-buttons">
+      <a href="login.html" class="btn btn-secondary">Log In</a>
+      <a href="register.html" class="btn btn-primary btn-block">Sign Up</a>
+    </div>
+  </div>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Alumni Directory</h1>
+      <p>Connect with fellow alumni from around the world.</p>
+    </div>
+  </section>
+
+  <section class="alumni-search">
+    <div class="container">
+      <div class="search-container">
+        <div class="search-box">
+          <i class="fa-solid fa-search"></i>
+          <input type="text" id="alumni-search-input" placeholder="Search by name or position...">
+        </div>
+        <button id="filter-toggle" class="btn btn-secondary filter-button">
+          <i class="fa-solid fa-filter"></i>
+          <span>Filters</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <button id="reset-filters" class="btn btn-outline reset-button hidden">
+          Reset Filters
+        </button>
+      </div>
+
+      <div id="filter-panel" class="filter-panel hidden">
+        <div class="filter-grid">
+          <div class="filter-group">
+            <label for="department-filter">Department</label>
+            <select id="department-filter">
+              <option value="all">All Departments</option>
+              <option value="Computer Science">Computer Science</option>
+              <option value="Business Administration">Business Administration</option>
+              <option value="Electrical Engineering">Electrical Engineering</option>
+              <option value="Marketing">Marketing</option>
+              <option value="Biomedical Engineering">Biomedical Engineering</option>
+              <option value="Finance">Finance</option>
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <label for="year-filter">Graduation Year</label>
+            <select id="year-filter">
+              <option value="all">All Years</option>
+              <option value="2005-2010">2005-2010</option>
+              <option value="2011-2015">2011-2015</option>
+              <option value="2016-2020">2016-2020</option>
+              <option value="2021-Present">2021-Present</option>
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <label for="location-filter">Location</label>
+            <select id="location-filter">
+              <option value="all">All Locations</option>
+              <option value="San Francisco, CA">San Francisco, CA</option>
+              <option value="New York, NY">New York, NY</option>
+              <option value="Austin, TX">Austin, TX</option>
+              <option value="Chicago, IL">Chicago, IL</option>
+              <option value="Boston, MA">Boston, MA</option>
+              <option value="Seattle, WA">Seattle, WA</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alumni-results">
+    <div class="container">
+      <div class="results-header">
+        <div id="results-count" class="results-count">
+          <span id="alumni-count">0</span> Alumni Found
+        </div>
+        <div class="view-toggle">
+          <button id="grid-view" class="view-button active">
+            <i class="fa-solid fa-grid-2"></i>
+          </button>
+          <button id="list-view" class="view-button">
+            <i class="fa-solid fa-list"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="alumni-container" class="alumni-grid">
+        <!-- Alumni cards will be loaded here from JS -->
+      </div>
+
+      <div id="no-results" class="no-results hidden">
+        <p>No alumni found matching your criteria.</p>
+        <button id="reset-filters-bottom" class="btn btn-secondary">
+          Reset Filters
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>AlumniConnect</span>
+          </div>
+          <p>Connecting graduates with their alma mater for mentorship, networking, and lifelong learning opportunities.</p>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="alumni.html">Alumni Directory</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="mentorship.html">Mentorship</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="#">Alumni Magazine</a></li>
+            <li><a href="#">Career Resources</a></li>
+            <li><a href="#">Scholarship Programs</a></li>
+            <li><a href="#">Donation Opportunities</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <ul class="contact-info">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>123 University Avenue, City, State ZIP</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span>(123) 456-7890</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:alumni@university.edu">alumni@university.edu</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> AlumniConnect. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/alumni.js"></script>
+</body>
+</html>

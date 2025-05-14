@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlumniConnect | Register</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header header-solid">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="index.html">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>AlumniConnect</span>
+          </a>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="alumni.html">Alumni Directory</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="mentorship.html">Mentorship</a></li>
+            <li><a href="news.html">News</a></li>
+          </ul>
+        </nav>
+        <div class="nav-buttons">
+          <a href="login.html" class="btn btn-secondary">Log In</a>
+          <a href="register.html" class="btn btn-primary active">Sign Up</a>
+        </div>
+        <button class="mobile-menu-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="logo">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>AlumniConnect</span>
+      </div>
+      <button class="mobile-menu-close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="alumni.html">Alumni Directory</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="mentorship.html">Mentorship</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-buttons">
+      <a href="login.html" class="btn btn-secondary">Log In</a>
+      <a href="register.html" class="btn btn-primary btn-block active">Sign Up</a>
+    </div>
+  </div>
+
+  <section class="auth-section">
+    <div class="container">
+      <div class="auth-container">
+        <div class="auth-image">
+          <img src="https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg" alt="University Campus">
+          <div class="overlay">
+            <div class="overlay-content">
+              <h2>Join Our Alumni Network</h2>
+              <p>Connect with fellow graduates, attend exclusive events, and give back to your alma mater.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="auth-form">
+          <div class="form-header">
+            <h1>Create Account</h1>
+            <p>Already have an account? <a href="login.html">Log in</a></p>
+          </div>
+          
+          <form id="register-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="firstName" required>
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="lastName" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <div class="input-icon">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" id="email" name="email" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="password">Password</label>
+              <div class="input-icon">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="password" name="password" required>
+                <button type="button" class="password-toggle">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+              </div>
+              <div class="password-strength hidden">
+                <div class="strength-bar">
+                  <div class="strength-fill"></div>
+                </div>
+                <span class="strength-text">Weak</span>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="graduation-year">Graduation Year</label>
+                <input type="number" id="graduation-year" name="graduationYear" min="1900" max="2025" required>
+              </div>
+              <div class="form-group">
+                <label for="department">Department/Major</label>
+                <select id="department" name="department" required>
+                  <option value="" disabled selected>Select your department</option>
+                  <option value="Computer Science">Computer Science</option>
+                  <option value="Business Administration">Business Administration</option>
+                  <option value="Electrical Engineering">Electrical Engineering</option>
+                  <option value="Marketing">Marketing</option>
+                  <option value="Biomedical Engineering">Biomedical Engineering</option>
+                  <option value="Finance">Finance</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-group checkbox">
+              <label class="checkbox-label">
+                <input type="checkbox" name="terms" required>
+                <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
+              </label>
+            </div>
+            
+            <div class="form-group checkbox">
+              <label class="checkbox-label">
+                <input type="checkbox" name="newsletter">
+                <span>Sign up for our newsletter to stay updated</span>
+              </label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+          </form>
+          
+          <div class="divider">
+            <span>or</span>
+          </div>
+          
+          <div class="social-login">
+            <button class="btn btn-social google">
+              <i class="fa-brands fa-google"></i>
+              <span>Continue with Google</span>
+            </button>
+            <button class="btn btn-social linkedin">
+              <i class="fa-brands fa-linkedin"></i>
+              <span>Continue with LinkedIn</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>AlumniConnect</span>
+          </div>
+          <p>Connecting graduates with their alma mater for mentorship, networking, and lifelong learning opportunities.</p>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="alumni.html">Alumni Directory</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="mentorship.html">Mentorship</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="#">Alumni Magazine</a></li>
+            <li><a href="#">Career Resources</a></li>
+            <li><a href="#">Scholarship Programs</a></li>
+            <li><a href="#">Donation Opportunities</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <ul class="contact-info">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>123 University Avenue, City, State ZIP</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span>(123) 456-7890</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:alumni@university.edu">alumni@university.edu</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> AlumniConnect. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

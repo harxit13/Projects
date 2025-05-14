@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlumniConnect | Events</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/events.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header header-solid">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="index.html">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>AlumniConnect</span>
+          </a>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="alumni.html">Alumni Directory</a></li>
+            <li><a href="events.html" class="active">Events</a></li>
+            <li><a href="mentorship.html">Mentorship</a></li>
+            <li><a href="news.html">News</a></li>
+          </ul>
+        </nav>
+        <div class="nav-buttons">
+          <a href="login.html" class="btn btn-secondary">Log In</a>
+          <a href="register.html" class="btn btn-primary">Sign Up</a>
+        </div>
+        <button class="mobile-menu-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="logo">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>AlumniConnect</span>
+      </div>
+      <button class="mobile-menu-close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="alumni.html">Alumni Directory</a></li>
+        <li><a href="events.html" class="active">Events</a></li>
+        <li><a href="mentorship.html">Mentorship</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-buttons">
+      <a href="login.html" class="btn btn-secondary">Log In</a>
+      <a href="register.html" class="btn btn-primary btn-block">Sign Up</a>
+    </div>
+  </div>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Events & Reunions</h1>
+      <p>Join us at these upcoming events to network, learn, and reconnect with your alma mater.</p>
+    </div>
+  </section>
+
+  <section class="events-filter">
+    <div class="container">
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">All Events</button>
+        <button class="filter-tab" data-filter="networking">Networking</button>
+        <button class="filter-tab" data-filter="reunion">Reunions</button>
+        <button class="filter-tab" data-filter="workshop">Workshops</button>
+        <button class="filter-tab" data-filter="webinar">Webinars</button>
+      </div>
+      
+      <div class="events-search">
+        <div class="search-box">
+          <i class="fa-solid fa-search"></i>
+          <input type="text" id="events-search-input" placeholder="Search events...">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-event">
+    <div class="container">
+      <div class="featured-event-card">
+        <div class="featured-event-image">
+          <img src="https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg" alt="Annual Alumni Gala">
+          <div class="event-date">
+            <span class="date-day">15</span>
+            <span class="date-month">JUN</span>
+          </div>
+        </div>
+        <div class="featured-event-content">
+          <span class="event-badge">Featured</span>
+          <h2>Annual Alumni Gala 2025</h2>
+          <div class="event-details">
+            <div class="event-detail">
+              <i class="fa-solid fa-calendar"></i>
+              <span>June 15, 2025</span>
+            </div>
+            <div class="event-detail">
+              <i class="fa-solid fa-clock"></i>
+              <span>6:00 PM</span>
+            </div>
+            <div class="event-detail">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Grand Hotel Ballroom</span>
+            </div>
+          </div>
+          <p>Join us for an elegant evening celebrating alumni achievements. The event will feature keynote speakers, awards ceremony, dinner, and networking opportunities.</p>
+          <div class="event-actions">
+            <a href="event-details.html" class="btn btn-secondary">View Details</a>
+            <a href="#register-modal" class="btn btn-primary">Register Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="events-list">
+    <div class="container">
+      <h2 class="section-title">Upcoming Events</h2>
+      
+      <div id="events-container" class="events-grid">
+        <!-- Event cards will be loaded here from JS -->
+      </div>
+      
+      <div id="no-events" class="no-results hidden">
+        <p>No events found matching your criteria.</p>
+        <button id="reset-events-filter" class="btn btn-secondary">
+          View All Events
+        </button>
+      </div>
+      
+      <div class="pagination">
+        <button class="pagination-btn" disabled>
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="pagination-number active">1</button>
+        <button class="pagination-number">2</button>
+        <button class="pagination-number">3</button>
+        <button class="pagination-btn">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="past-events">
+    <div class="container">
+      <h2 class="section-title">Past Events</h2>
+      <p class="section-subtitle">Revisit some of our recent successful events.</p>
+      
+      <div class="past-events-slider">
+        <div class="slider-container" id="past-events-slider">
+          <!-- Past event slides will be loaded here from JS -->
+        </div>
+        <button class="slider-arrow slider-prev">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="slider-arrow slider-next">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>AlumniConnect</span>
+          </div>
+          <p>Connecting graduates with their alma mater for mentorship, networking, and lifelong learning opportunities.</p>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="alumni.html">Alumni Directory</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="mentorship.html">Mentorship</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="#">Alumni Magazine</a></li>
+            <li><a href="#">Career Resources</a></li>
+            <li><a href="#">Scholarship Programs</a></li>
+            <li><a href="#">Donation Opportunities</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <ul class="contact-info">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>123 University Avenue, City, State ZIP</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span>(123) 456-7890</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:alumni@university.edu">alumni@university.edu</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> AlumniConnect. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Registration Modal (Hidden by default) -->
+  <div id="register-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Register for Event</h3>
+        <button class="modal-close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="event-registration-form">
+          <div class="form-group">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+          </div>
+          <div class="form-group">
+            <label for="graduation-year">Graduation Year</label>
+            <input type="number" id="graduation-year" min="1950" max="2025" required>
+          </div>
+          <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <input type="number" id="guests" min="0" max="2" value="0">
+          </div>
+          <div class="form-group">
+            <label for="dietary">Dietary Restrictions</label>
+            <textarea id="dietary" rows="2"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Complete Registration</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/events.js"></script>
+</body>
+</html>

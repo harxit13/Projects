@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlumniConnect | Mentorship Program</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/mentorship.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header header-solid">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="index.html">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>AlumniConnect</span>
+          </a>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="alumni.html">Alumni Directory</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="mentorship.html" class="active">Mentorship</a></li>
+            <li><a href="news.html">News</a></li>
+          </ul>
+        </nav>
+        <div class="nav-buttons">
+          <a href="login.html" class="btn btn-secondary">Log In</a>
+          <a href="register.html" class="btn btn-primary">Sign Up</a>
+        </div>
+        <button class="mobile-menu-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="logo">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>AlumniConnect</span>
+      </div>
+      <button class="mobile-menu-close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="alumni.html">Alumni Directory</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="mentorship.html" class="active">Mentorship</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-buttons">
+      <a href="login.html" class="btn btn-secondary">Log In</a>
+      <a href="register.html" class="btn btn-primary btn-block">Sign Up</a>
+    </div>
+  </div>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Mentorship Program</h1>
+      <p>Connect with current students to share your expertise and help shape the next generation of professionals.</p>
+    </div>
+  </section>
+
+  <section class="mentorship-tabs">
+    <div class="container">
+      <div class="tabs">
+        <button class="tab active" data-tab="overview">Program Overview</button>
+        <button class="tab" data-tab="become-mentor">Become a Mentor</button>
+        <button class="tab" data-tab="find-mentor">Find a Mentor</button>
+        <button class="tab" data-tab="success-stories">Success Stories</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="tab-content" id="overview-content">
+    <div class="container">
+      <div class="two-col">
+        <div class="col">
+          <h2>About the Mentorship Program</h2>
+          <p>Our mentorship program connects experienced alumni with current students and recent graduates who are seeking guidance in their academic and professional journeys.</p>
+          <p>Mentorship relationships provide valuable insights, networking opportunities, and personalized advice that can help mentees navigate their career paths more effectively.</p>
+          
+          <h3>Program Benefits</h3>
+          <div class="benefits">
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <i class="fa-solid fa-handshake"></i>
+              </div>
+              <div class="benefit-content">
+                <h4>For Mentors</h4>
+                <ul>
+                  <li>Give back to your alma mater</li>
+                  <li>Develop leadership and coaching skills</li>
+                  <li>Expand your professional network</li>
+                  <li>Gain fresh perspectives from new talent</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div class="benefit-content">
+                <h4>For Mentees</h4>
+                <ul>
+                  <li>Receive personalized guidance and advice</li>
+                  <li>Build valuable industry connections</li>
+                  <li>Develop professional skills</li>
+                  <li>Gain confidence in career decisions</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="info-card">
+            <h3>How It Works</h3>
+            <div class="steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Registration</h4>
+                  <p>Alumni register as mentors and students register as mentees, both indicating their areas of interest and expertise.</p>
+                </div>
+              </div>
+              
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Matching</h4>
+                  <p>Our system suggests potential matches based on shared interests, goals, and expertise.</p>
+                </div>
+              </div>
+              
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Connection</h4>
+                  <p>Mentors and mentees connect and establish communication channels and expectations.</p>
+                </div>
+              </div>
+              
+              <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h4>Ongoing Relationship</h4>
+                  <p>Regular meetings and check-ins help build a meaningful mentorship relationship.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="cta-card">
+            <h3>Ready to Get Involved?</h3>
+            <p>Whether you're looking to share your experience or seeking guidance, our mentorship program has something for you.</p>
+            <div class="cta-buttons">
+              <button class="btn btn-primary" id="become-mentor-btn">Become a Mentor</button>
+              <button class="btn btn-secondary" id="find-mentor-btn">Find a Mentor</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tab-content hidden" id="become-mentor-content">
+    <div class="container">
+      <div class="two-col">
+        <div class="col">
+          <h2>Become a Mentor</h2>
+          <p>Share your professional experience and insights with current students and recent graduates. As a mentor, you'll have the opportunity to make a meaningful impact on the next generation of professionals.</p>
+          
+          <div class="info-box">
+            <h3>What Makes a Good Mentor?</h3>
+            <ul class="check-list">
+              <li>Professional experience in your field</li>
+              <li>Willingness to share knowledge and insights</li>
+              <li>Good listening and communication skills</li>
+              <li>Empathy and patience</li>
+              <li>Commitment to regular communication</li>
+              <li>Interest in helping others grow and develop</li>
+            </ul>
+          </div>
+          
+          <div class="testimonial">
+            <div class="quote">
+              <i class="fa-solid fa-quote-left"></i>
+              <p>Being a mentor has been one of the most rewarding experiences of my career. Watching my mentees grow and succeed gives me immense satisfaction, and I've learned so much from them too.</p>
+              <i class="fa-solid fa-quote-right"></i>
+            </div>
+            <div class="author">
+              <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="James Wilson">
+              <div>
+                <h4>James Wilson</h4>
+                <p>Marketing Director, Class of 2015</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="form-card">
+            <h3>Mentor Registration</h3>
+            <form id="mentor-registration-form">
+              <div class="form-group">
+                <label for="mentor-areas">Areas of Expertise</label>
+                <div class="checkbox-grid">
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="expertise" value="career-guidance">
+                    <span>Career Guidance</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="expertise" value="technical-skills">
+                    <span>Technical Skills</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="expertise" value="graduate-school">
+                    <span>Graduate School</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="expertise" value="entrepreneurship">
+                    <span>Entrepreneurship</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="expertise" value="internships">
+                    <span>Internships</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="expertise" value="research">
+                    <span>Research</span>
+                  </label>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="availability">Availability (hours per month)</label>
+                <input type="number" id="availability" min="1" max="20" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="mentor-bio">Professional Bio</label>
+                <textarea id="mentor-bio" rows="4" placeholder="Tell potential mentees about your professional experience and what you can offer as a mentor..." required></textarea>
+              </div>
+              
+              <div class="form-group">
+                <label for="mentor-expectations">Mentorship Expectations</label>
+                <textarea id="mentor-expectations" rows="3" placeholder="What do you expect from this mentorship relationship? How do you prefer to communicate?"></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn-primary btn-block">Register as Mentor</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tab-content hidden" id="find-mentor-content">
+    <div class="container">
+      <h2>Find a Mentor</h2>
+      <p class="section-subtitle">Connect with experienced alumni who can provide guidance in your area of interest.</p>
+      
+      <div class="mentor-search">
+        <div class="search-box">
+          <i class="fa-solid fa-search"></i>
+          <input type="text" id="mentor-search-input" placeholder="Search mentors by name, position, or skills...">
+        </div>
+        
+        <div class="filter-dropdown">
+          <button class="btn btn-secondary dropdown-toggle">
+            <i class="fa-solid fa-filter"></i>
+            <span>Filter by Expertise</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="dropdown-menu">
+            <label class="checkbox-label">
+              <input type="checkbox" name="filter" value="all" checked>
+              <span>All Areas</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="filter" value="career-guidance">
+              <span>Career Guidance</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="filter" value="technical-skills">
+              <span>Technical Skills</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="filter" value="graduate-school">
+              <span>Graduate School</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="filter" value="entrepreneurship">
+              <span>Entrepreneurship</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="filter" value="internships">
+              <span>Internships</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="filter" value="research">
+              <span>Research</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      
+      <div id="mentors-container" class="mentors-grid">
+        <!-- Mentor cards will be loaded here from JS -->
+      </div>
+      
+      <div id="no-mentors" class="no-results hidden">
+        <p>No mentors found matching your criteria.</p>
+        <button id="reset-mentor-filters" class="btn btn-secondary">
+          View All Mentors
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="tab-content hidden" id="success-stories-content">
+    <div class="container">
+      <h2>Success Stories</h2>
+      <p class="section-subtitle">Real experiences from participants in our mentorship program.</p>
+      
+      <div class="stories-grid">
+        <div class="story-card">
+          <div class="story-image">
+            <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg" alt="Priya and Michael">
+          </div>
+          <div class="story-content">
+            <h3>From Confusion to Clarity</h3>
+            <div class="participants">
+              <div class="participant">
+                <p><strong>Mentor:</strong> Priya Patel</p>
+                <p>Lead Engineer at SpaceX</p>
+              </div>
+              <div class="participant">
+                <p><strong>Mentee:</strong> Michael Zhang</p>
+                <p>Electrical Engineering, Class of 2023</p>
+              </div>
+            </div>
+            <p>"When I started my senior year, I was torn between pursuing graduate studies and entering the workforce. My mentor, Priya, shared her own career journey and helped me evaluate my options objectively. With her guidance, I decided to gain some industry experience first, and I've secured a position at a leading tech company!"</p>
+            <p class="quote-author">— Michael Zhang, Mentee</p>
+          </div>
+        </div>
+        
+        <div class="story-card">
+          <div class="story-image">
+            <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg" alt="Chen and Sofia">
+          </div>
+          <div class="story-content">
+            <h3>Launching a Startup Success</h3>
+            <div class="participants">
+              <div class="participant">
+                <p><strong>Mentor:</strong> Michael Chen</p>
+                <p>Founder & CEO of GreenStart</p>
+              </div>
+              <div class="participant">
+                <p><strong>Mentee:</strong> Sofia Rodriguez</p>
+                <p>Business Administration, Class of 2022</p>
+              </div>
+            </div>
+            <p>"I had a business idea but no clue how to execute it. Michael not only guided me through the startup process but also connected me with investors and potential partners. My sustainable fashion marketplace is now live with over 50 vendors! This wouldn't have been possible without the mentorship program."</p>
+            <p class="quote-author">— Sofia Rodriguez, Mentee</p>
+          </div>
+        </div>
+        
+        <div class="story-card">
+          <div class="story-image">
+            <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" alt="Sarah and James">
+          </div>
+          <div class="story-content">
+            <h3>Breaking Into Tech</h3>
+            <div class="participants">
+              <div class="participant">
+                <p><strong>Mentor:</strong> Dr. Sarah Johnson</p>
+                <p>CTO at TechCorp</p>
+              </div>
+              <div class="participant">
+                <p><strong>Mentee:</strong> James Park</p>
+                <p>Computer Science, Class of 2024</p>
+              </div>
+            </div>
+            <p>"As a first-generation college student, I didn't have connections in the tech industry. Dr. Johnson helped me prepare for technical interviews, refine my resume, and build a portfolio that showcased my skills. Thanks to her mentorship, I landed an internship at a FAANG company that turned into a full-time offer!"</p>
+            <p class="quote-author">— James Park, Mentee</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="center-content">
+        <a href="#" class="btn btn-primary">Apply to Share Your Story</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mentorship-cta">
+    <div class="container">
+      <div class="cta-wrapper">
+        <h2>Make a Difference Today</h2>
+        <p>Your experience and knowledge can help shape the future of our students and recent graduates.</p>
+        <a href="#" class="btn btn-primary">Join the Mentorship Program</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>AlumniConnect</span>
+          </div>
+          <p>Connecting graduates with their alma mater for mentorship, networking, and lifelong learning opportunities.</p>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="alumni.html">Alumni Directory</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="mentorship.html">Mentorship</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="#">Alumni Magazine</a></li>
+            <li><a href="#">Career Resources</a></li>
+            <li><a href="#">Scholarship Programs</a></li>
+            <li><a href="#">Donation Opportunities</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <ul class="contact-info">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>123 University Avenue, City, State ZIP</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span>(123) 456-7890</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:alumni@university.edu">alumni@university.edu</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> AlumniConnect. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/mentorship.js"></script>
+</body>
+</html>
